@@ -1,0 +1,129 @@
+
+:root {
+    /* Primary  */
+
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+/* Neutral */
+
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body {
+    font-family: Poppins ;
+    Font-size: 15px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+main {
+    text-align: center;
+}
+main>span {
+    display: block;
+    margin-top: 50px;
+    font-size: 1.9rem;
+    color: var(--Grayish-Blue);
+    
+}
+main>h1 {
+   font-size: 2rem;
+   margin-top: 5px;
+}
+main>p {
+    max-width: 550px;
+    margin: 10px auto 50px;
+    color: var(--Grayish-Blue);
+    line-height: 1.5;
+}
+.continaer_box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* media  */
+@media (mex-width: 991px) {
+    .continaer_box {
+        flex-direction: column;
+    }
+   
+}
+.continaer_box .box {
+    box-shadow: 0px 0px 50px -20px var(--Very-Dark-Blue);
+}
+.continaer_box .box_flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (max-width: 991px) {
+    .continaer_box .box_flex {
+        flex-direction: row;
+    }
+}
+@media (max-width: 867px) {
+    .continaer_box .box_flex {
+        flex-direction: column;
+    }
+   
+}
+.continaer_box .box {
+    max-width: 300px;
+    border-radius: 5px;
+    position: relative;
+}
+.continaer_box .box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 0;
+    border-radius: 10px 10px 0px 0px;
+}
+.continaer_box .box:first-child::before {
+    background-color: var(--Cyan);
+}
+.continaer_box .box_flex .box:first-child::before {
+    background-color: var(--Red)
+}
+.continaer_box .box_flex .box:last-child::before {
+    background-color: var(--Orange);
+}
+.continaer_box .box:last-child::before {
+    background-color: var(--Blue);
+}
+
+.continaer_box .box h3,
+.continaer_box .box_flex .box h3 {
+    margin: 20px 20px 15px;
+    color: var(--Very-Dark-Blue);
+}
+.continaer_box .box p {
+    margin: 0px 20px 30px;
+    font-size: .8rem;
+    line-height: 1.7;
+    color: var(--Grayish-Blue);
+}
+.continaer_box .box img {
+    display: block;
+    margin: 10px 30px 25px auto;
+    width: 50px;
+}
